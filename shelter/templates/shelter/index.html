@@ -1,0 +1,23 @@
+{% extends 'shelter/base.html' %}
+{% block title %}{{ title }}  {% endblock %}
+
+ {% load static %}
+{% block content %}
+<div class="row justify-content-center">
+         {% for animal in animals %}
+
+                <div class="card ml-2 mr-2 mb-3" style="width: 18rem;">
+                <img class="card-img-top" src="/media/{{animal.photo}}" alt="{{animal.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{animal.name}}</h5>
+                    {% comment %} <p class="card-text text-center">{{animal.description}}</p> {% endcomment %}
+                    <a href="animal/{{ animal.id }}" class=" stretched-link "></a>
+                </div>
+                </div>
+
+        {% endfor %}
+
+</div>
+    {% endblock %}
+</body>
+</html>

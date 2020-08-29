@@ -1,0 +1,30 @@
+{% extends 'shelter/base.html' %}
+{% block title %}{{animal.name}}{% endblock %}
+
+ {% load static %}
+{% block content %}
+<div class="row">
+<div class="col-12 text-center"> <h1>{{animal.name}}</h1></div>
+<div class="col-12  mb-5 ">
+        
+        </div>
+        <div class="col-md-auto">
+        
+        <img class="img" src="/media/{{animal.photo}}" alt="{{animal.name}}">
+        
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+        <span class="align-middle">
+        <strong>Порода:</strong> <p>{{animal.breed}}</p> 
+        <strong>Возраст:</strong> <p>{{animal.age}}</p> 
+        <strong>Пол:</strong> <p>{{animal.sex}}</p> 
+        <strong>Дата поступления в "Убежище":</strong> <p>{{animal.created_date}}</p> 
+        <p>{{animal.description}}</p>
+        </span>
+        </div>
+    </div>
+    {% endblock %}
+
+
+</body>
+</html>
